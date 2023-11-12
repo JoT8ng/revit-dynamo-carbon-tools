@@ -29,7 +29,7 @@ try:
 	TransactionManager.Instance.EnsureInTransaction(doc)
 
 	# Create new Area Type Family Parameter
-	paramName = "EPD prod-" + str(prodNumber)
+	paramName = "EPD prod " + str(prodNumber)
 	newParam = familyManager.AddParameter(paramName, BuiltInParameterGroup.PG_DATA, ParameterType.Text, False)
 
 	# Set Parameter value
