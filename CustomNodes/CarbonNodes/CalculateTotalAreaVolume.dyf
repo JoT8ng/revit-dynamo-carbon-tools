@@ -1,0 +1,181 @@
+{
+  "Uuid": "45eb6ecd-f6ea-4d8d-a036-1723076ea6de",
+  "IsCustomNode": true,
+  "Category": "CarbonNodes",
+  "Description": "Calculate the total area or volume from a list of areas or volume numbers",
+  "Name": "CalculateTotalAreaVolume",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "a5b05205-fae4-42bf-96ad-e15977ceda1f",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "4eed0bdf54a5419db5ee957ba23ef310",
+      "Inputs": [
+        {
+          "Id": "e2ebf63ff33d40f097993bb1fe77029e",
+          "Name": "_list",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "42aa8ae6b70f48758ac7c9b11d89db34",
+          "Name": "_total",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node will attempt to sum all elements contained within it. "
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "input",
+        "TypeName": "List",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "566bc0794cd04c14a1c6fea7a2be8365",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "77f31830e82f4cdf9d2fd65d02c42266",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "OUT:List",
+      "Id": "7a4e259c3b504979a5b38af204effa0e",
+      "Inputs": [
+        {
+          "Id": "c2b5ad6a64aa4623b821b064aa437fc4",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "42aa8ae6b70f48758ac7c9b11d89db34",
+      "End": "c2b5ad6a64aa4623b821b064aa437fc4",
+      "Id": "9e7734606383487da88a5ab7918c362a"
+    },
+    {
+      "Start": "77f31830e82f4cdf9d2fd65d02c42266",
+      "End": "e2ebf63ff33d40f097993bb1fe77029e",
+      "Id": "0c9849836ca44b089f4ce44d11662ee2"
+    }
+  ],
+  "Dependencies": [
+    "a5b05205-fae4-42bf-96ad-e15977ceda1f"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "archi-lab.net",
+      "Version": "2020.23.13",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "4eed0bdf54a5419db5ee957ba23ef310"
+      ]
+    }
+  ],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.3.0.5885",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Default Camera",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Mass Addition",
+        "Id": "4eed0bdf54a5419db5ee957ba23ef310",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 836.57755612779988,
+        "Y": 369.967536779656
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "566bc0794cd04c14a1c6fea7a2be8365",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 659.59988897014046,
+        "Y": 373.03448046145127
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "7a4e259c3b504979a5b38af204effa0e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1081.7888527624016,
+        "Y": 412.02714810904894
+      }
+    ],
+    "Annotations": [],
+    "X": -67.582668991233163,
+    "Y": 45.82717731416966,
+    "Zoom": 0.822695359375
+  }
+}

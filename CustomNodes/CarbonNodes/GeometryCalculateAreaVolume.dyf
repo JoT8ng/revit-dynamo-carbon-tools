@@ -1,0 +1,592 @@
+{
+  "Uuid": "be1d1e1f-fcd8-4dd3-bc1b-755007395246",
+  "IsCustomNode": true,
+  "Category": "CarbonNodes",
+  "Description": "Calculate the area or volume of element geometry through solids and surfaces",
+  "Name": "GeometryCalculateAreaVolume",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Revit.Elements.Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      },
+      "Solid.Volume": {
+        "Key": "Autodesk.DesignScript.Geometry.Solid",
+        "Value": "ProtoGeometry.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [
+    {
+      "Id": "76b6c076b3424f46b8f1b29f38b5c5ab",
+      "Name": "Convert Between Units",
+      "Type": "unknown",
+      "InitialValue": "",
+      "Description": "Convert between units of measure."
+    },
+    {
+      "Id": "8cd1bd3e49544410a63a3e5bded32f7a",
+      "Name": "Convert Between Units",
+      "Type": "unknown",
+      "InitialValue": "",
+      "Description": "Convert between units of measure."
+    },
+    {
+      "Id": "7afe056a166e42d8852b9297579e48e7",
+      "Name": "Convert Between Units",
+      "Type": "unknown",
+      "InitialValue": "",
+      "Description": "Convert between units of measure."
+    }
+  ],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Geometry",
+      "Id": "ec4092ac2b7d4ac19005711a77d9d2ea",
+      "Inputs": [
+        {
+          "Id": "0a625d9b73a647569359fa51a5692499",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ab55d8ce91ae4b3ababc95424881d36b",
+          "Name": "var[]",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get all of the Geometry associated with this object\n\nElement.Geometry ( ): var[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Faces",
+      "Id": "7fc39693bbc0487f8b55dab96863fa6b",
+      "Inputs": [
+        {
+          "Id": "a86cb62a4fe84eec9ad919234c131f69",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9ce66138dc9b4139a9aecd0089ab8cd8",
+          "Name": "Surface[]",
+          "Description": "Surface[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The Faces in this Element\n\nElement.Faces: Surface[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.Volume",
+      "Id": "ff685bf8b8af49d39658a59134576c5a",
+      "Inputs": [
+        {
+          "Id": "388996a906de4e0cadef61530f0151a3",
+          "Name": "solid",
+          "Description": "Autodesk.DesignScript.Geometry.Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1abe0b139471436dad1a1e8e6af61233",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The total volume of the Solid\n\nSolid.Volume: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.Area",
+      "Id": "72ef7cbbc3be4323838cbefb93879cf6",
+      "Inputs": [
+        {
+          "Id": "2129c4f4d88c46b782b19368e0ef918a",
+          "Name": "solid",
+          "Description": "Autodesk.DesignScript.Geometry.Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a5722c709a4f4fe6b5e37dc9b6d43dc6",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the surface area -- sum of all the areas of all faces\n\nSolid.Area: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.Area",
+      "Id": "0e08ac35aa5e40fdba4f8943c517746e",
+      "Inputs": [
+        {
+          "Id": "45723a159ead4b29a41d7f9b19f7cbe2",
+          "Name": "surface",
+          "Description": "Autodesk.DesignScript.Geometry.Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e4455234f73446f6a3bb3d4fe7479080",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the total surface area.\n\nSurface.Area: double"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.DynamoConvert, CoreNodeModels",
+      "NodeType": "ConvertBetweenUnitsNode",
+      "MeasurementType": "Volume",
+      "FromConversion": "CubicMillimeter",
+      "ToConversion": "CubicMeters",
+      "Id": "76b6c076b3424f46b8f1b29f38b5c5ab",
+      "Inputs": [
+        {
+          "Id": "f8a69c4837e141228ae52cae0d7c72ca",
+          "Name": "",
+          "Description": "A numeric value for conversion.",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0d0d418f2c28433eb28823afba7091e6",
+          "Name": "",
+          "Description": "A converted numeric value.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Convert between units of measure."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.DynamoConvert, CoreNodeModels",
+      "NodeType": "ConvertBetweenUnitsNode",
+      "MeasurementType": "Area",
+      "FromConversion": "SquareMillimeter",
+      "ToConversion": "SquareMeter",
+      "Id": "8cd1bd3e49544410a63a3e5bded32f7a",
+      "Inputs": [
+        {
+          "Id": "c86514c0c7424c28b6d4bfdcc14b1e11",
+          "Name": "",
+          "Description": "A numeric value for conversion.",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "55f9d323a02b4530b2f3b060cd12de2e",
+          "Name": "",
+          "Description": "A converted numeric value.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Convert between units of measure."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.DynamoConvert, CoreNodeModels",
+      "NodeType": "ConvertBetweenUnitsNode",
+      "MeasurementType": "Area",
+      "FromConversion": "SquareMillimeter",
+      "ToConversion": "SquareMeter",
+      "Id": "7afe056a166e42d8852b9297579e48e7",
+      "Inputs": [
+        {
+          "Id": "1e96a92d1410475dafb467bb8e67eba7",
+          "Name": "",
+          "Description": "A numeric value for conversion.",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "26dd43af256a4e82b214523f42e1e343",
+          "Name": "",
+          "Description": "A converted numeric value.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Convert between units of measure."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "input",
+        "TypeName": "Revit.Elements.Element",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "c239b930dfb24b53b1f6b15920de4fed",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b51be0013abd4c48b5ac479040c514fb",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "Solid.Volume:List",
+      "Id": "97bfd292234b4669a573101a1c9ec35b",
+      "Inputs": [
+        {
+          "Id": "aad9996dd8a5440bbcbeb1f562c01fae",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "Solid.Area:List",
+      "Id": "8b3fe39c3bb046acb8b859cb5e20297b",
+      "Inputs": [
+        {
+          "Id": "a2f36faee4854161b5863439e2ca69f8",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "Surface.Area:List",
+      "Id": "fb2d2438b1fb454b8dbec1365d6df6e3",
+      "Inputs": [
+        {
+          "Id": "39535b5db94d41cba2404adaabb33263",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "ab55d8ce91ae4b3ababc95424881d36b",
+      "End": "388996a906de4e0cadef61530f0151a3",
+      "Id": "941b05c2a147406783d049b2af95f858"
+    },
+    {
+      "Start": "ab55d8ce91ae4b3ababc95424881d36b",
+      "End": "2129c4f4d88c46b782b19368e0ef918a",
+      "Id": "5f688739be464558bebf26cc9b073f5e"
+    },
+    {
+      "Start": "9ce66138dc9b4139a9aecd0089ab8cd8",
+      "End": "45723a159ead4b29a41d7f9b19f7cbe2",
+      "Id": "8eb83798bd174994861240334a72d31e"
+    },
+    {
+      "Start": "1abe0b139471436dad1a1e8e6af61233",
+      "End": "f8a69c4837e141228ae52cae0d7c72ca",
+      "Id": "966c641c830741eeaaf1232fd3d89fca"
+    },
+    {
+      "Start": "a5722c709a4f4fe6b5e37dc9b6d43dc6",
+      "End": "c86514c0c7424c28b6d4bfdcc14b1e11",
+      "Id": "35317284af124e6b9ae4b44793616b5d"
+    },
+    {
+      "Start": "e4455234f73446f6a3bb3d4fe7479080",
+      "End": "1e96a92d1410475dafb467bb8e67eba7",
+      "Id": "910f3f024d5f4efbb037a081751cef3c"
+    },
+    {
+      "Start": "0d0d418f2c28433eb28823afba7091e6",
+      "End": "aad9996dd8a5440bbcbeb1f562c01fae",
+      "Id": "ebd9381d27e84b27a83bbef11da58f88"
+    },
+    {
+      "Start": "55f9d323a02b4530b2f3b060cd12de2e",
+      "End": "a2f36faee4854161b5863439e2ca69f8",
+      "Id": "ed63c2e463ad456e8e35d897a940a8ef"
+    },
+    {
+      "Start": "26dd43af256a4e82b214523f42e1e343",
+      "End": "39535b5db94d41cba2404adaabb33263",
+      "Id": "b8ec234bf4cf4744a1d0fb2394841177"
+    },
+    {
+      "Start": "b51be0013abd4c48b5ac479040c514fb",
+      "End": "0a625d9b73a647569359fa51a5692499",
+      "Id": "ec7735e7c40f4e15b3f6ed2e1c205653"
+    },
+    {
+      "Start": "b51be0013abd4c48b5ac479040c514fb",
+      "End": "a86cb62a4fe84eec9ad919234c131f69",
+      "Id": "e5e8306232dd48819d06269ede9a5be8"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.3.0.5885",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Default Camera",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Element.Geometry",
+        "Id": "ec4092ac2b7d4ac19005711a77d9d2ea",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 303.90651680515214,
+        "Y": 471.42238767944019
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.Faces",
+        "Id": "7fc39693bbc0487f8b55dab96863fa6b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 289.765949090916,
+        "Y": 598.482383351236
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Solid.Volume",
+        "Id": "ff685bf8b8af49d39658a59134576c5a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 574.69167268283229,
+        "Y": 466.022181502503
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Solid.Area",
+        "Id": "72ef7cbbc3be4323838cbefb93879cf6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 571.1871050109213,
+        "Y": 585.77171387409453
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Surface.Area",
+        "Id": "0e08ac35aa5e40fdba4f8943c517746e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 561.66025080619136,
+        "Y": 724.84266980884263
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Convert Between Units",
+        "Id": "76b6c076b3424f46b8f1b29f38b5c5ab",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": true,
+        "Excluded": false,
+        "X": 840.01001798366428,
+        "Y": 510.57100733351052
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Convert Between Units",
+        "Id": "8cd1bd3e49544410a63a3e5bded32f7a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": true,
+        "Excluded": false,
+        "X": 839.5035277259833,
+        "Y": 640.32973930741355
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Convert Between Units",
+        "Id": "7afe056a166e42d8852b9297579e48e7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": true,
+        "Excluded": false,
+        "X": 840.74365334240326,
+        "Y": 793.47652645043945
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "c239b930dfb24b53b1f6b15920de4fed",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -5.1001087132424914,
+        "Y": 534.26386674943933
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Solid.Volume",
+        "Id": "97bfd292234b4669a573101a1c9ec35b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1413.4828174699032,
+        "Y": 544.64465537210776
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Solid.Area",
+        "Id": "8b3fe39c3bb046acb8b859cb5e20297b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1409.1990056451186,
+        "Y": 674.34352052203985
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Surface.Area",
+        "Id": "fb2d2438b1fb454b8dbec1365d6df6e3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1404.5269781350019,
+        "Y": 796.57957024304051
+      }
+    ],
+    "Annotations": [],
+    "X": -477.42925896101065,
+    "Y": -52.236983367060589,
+    "Zoom": 0.752633033731266
+  }
+}
