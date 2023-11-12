@@ -65,7 +65,7 @@ try:
 	TransactionManager.Instance.EnsureInTransaction(doc)
 
 	# Create new Area Type Family Parameter
-	paramName = "prod-" + str(prodNumber) + "-" + str(stage) + "-Carbon"
+	paramName = "prod " + str(prodNumber) + " " + str(stage) + " Carbon"
 	newParam = familyManager.AddParameter(paramName, BuiltInParameterGroup.PG_DATA, ParameterType.Integer, False)
 
 	# Set Parameter value
