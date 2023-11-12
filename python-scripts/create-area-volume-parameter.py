@@ -32,7 +32,7 @@ try:
 	TransactionManager.Instance.EnsureInTransaction(doc)
 
 	# Create new Area Type Family Parameter
-	paramName = "prod-" + str(prodNumber) + "-" + str(paramType)
+	paramName = "prod " + str(prodNumber) + " " + str(paramType)
 	areaParam = familyManager.AddParameter(paramName, BuiltInParameterGroup.PG_DATA, ParameterType.Integer, False)
 
 	# Set Parameter value
