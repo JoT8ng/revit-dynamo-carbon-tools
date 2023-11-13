@@ -31,9 +31,9 @@ EmbodiedCarbon-SystemFamilyTool.dyn
 
 For more in depth documentation on how to use each Dynamo script please visit the links below:
 
-[In Place Family](https://github.com/JoT8ng/revit-dynamo-carbon-tools/blob/main/docs/inplacedocs.md)
+[In Place Family](https://github.com/JoT8ng/revit-dynamo-carbon-tools/blob/main/docs/inplacedocs.md), 
 
-[Loadable Family](https://github.com/JoT8ng/revit-dynamo-carbon-tools/blob/main/docs/loadablefamilydocs.md)
+[Loadable Family](https://github.com/JoT8ng/revit-dynamo-carbon-tools/blob/main/docs/loadablefamilydocs.md), 
 
 [System Family](https://github.com/JoT8ng/revit-dynamo-carbon-tools/blob/main/docs/systemfamilydocs.md)
 
