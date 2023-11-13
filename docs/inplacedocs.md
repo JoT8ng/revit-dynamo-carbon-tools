@@ -21,6 +21,7 @@ These group of nodes will have three outputs into a nested list:
 * volume by solid
 * area by solid
 * area by surfaces
+  
 The user is then required to select one of these outputs and feed it into the group of nodes that calculates the total area or volume of the listed values.
 <img src="/media/InPlaceFamily/CalculateTotalAreaVolume.png" alt="calculate total area volume nodes">
 
