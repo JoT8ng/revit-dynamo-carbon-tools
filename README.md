@@ -1,5 +1,5 @@
 # Revit Dynamo Carbon Tools
-_Last update 10/11/2023_
+_Last update 13/11/2023_
 
 Ongoing project that uses the Revit API Dynamo Python Primer to calculate the embodied carbon emissions of building components using an existing EPD (Environmental Product Declaration) database within a Revit BIM model. This tool allows architects to store and schedule carbon data to conduct analysis of the overall embodied carbon of their construction projects.
 
