@@ -2,7 +2,7 @@
   "Uuid": "74f7386d-c127-4191-bea0-b95f9060b1fd",
   "IsCustomNode": false,
   "Description": null,
-  "Name": "EmbodiedCarbon-InPlaceFamily",
+  "Name": "EmbodiedCarbon-InPlaceFamily-S",
   "ElementResolver": {
     "ResolutionMap": {}
   },
@@ -1004,8 +1004,8 @@
       "Id": "0d5d68d307c74e2d979e712e8398a445",
       "Inputs": [
         {
-          "Id": "ca797e971b8b4714b0d70d92011c09b3",
-          "Name": "input",
+          "Id": "7a1299d4bd7b46f1b4db15721922460c",
+          "Name": "Input",
           "Description": "Element",
           "UsingDefaultValue": false,
           "Level": 2,
@@ -1024,7 +1024,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "406c377000b546a9a42eb1f5c2e50d10",
+          "Id": "dfbc46029abc4c27a2a8cb578c25a016",
           "Name": "Solid.Area:List",
           "Description": "return value",
           "UsingDefaultValue": false,
@@ -1033,7 +1033,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "6c2013f808a444d1a0e781483245f262",
+          "Id": "08a365f941a04dd89e6454feaee376f6",
           "Name": "Surface.Area:List",
           "Description": "return value",
           "UsingDefaultValue": false,
@@ -1206,8 +1206,8 @@
     },
     {
       "Start": "f04590626a1641f79b1f8b0543efb287",
-      "End": "ca797e971b8b4714b0d70d92011c09b3",
-      "Id": "0f94034b92634e58976482b2c85f7a9f"
+      "End": "7a1299d4bd7b46f1b4db15721922460c",
+      "Id": "da84224324074ac6b861e54286e5014c"
     },
     {
       "Start": "e1b3ae8e58c44212ac6385a9a794e990",
@@ -1340,19 +1340,19 @@
       "Id": "f4b5b7de336844ff8639c060f13802ee"
     },
     {
-      "Start": "406c377000b546a9a42eb1f5c2e50d10",
+      "Start": "dfbc46029abc4c27a2a8cb578c25a016",
       "End": "1c59e89015cd4e74a3779478d7fa1e5d",
-      "Id": "e060e4ee99354a9ca1f30ddb96fde207"
+      "Id": "df064ee79b224566a71659da531d8996"
     },
     {
-      "Start": "406c377000b546a9a42eb1f5c2e50d10",
+      "Start": "dfbc46029abc4c27a2a8cb578c25a016",
       "End": "5907cac86d074631b756e00523a9e0bc",
-      "Id": "c51a7d4728034db08c2bea7b123212fb"
+      "Id": "d8074947f55c4e3c8570bdf0a3ce877c"
     },
     {
-      "Start": "6c2013f808a444d1a0e781483245f262",
+      "Start": "08a365f941a04dd89e6454feaee376f6",
       "End": "5af873f70a1f495db53b99fa93eaac35",
-      "Id": "1e6caf9f396845959576116a4c1c1de5"
+      "Id": "a6a92536783040189f75e00036dedf45"
     },
     {
       "Start": "8fb9f447ac86410484b369f664661eb8",
@@ -1830,7 +1830,7 @@
         "Left": -391.35026651930667,
         "Top": -1.962842005784438,
         "Width": 330.91319727398513,
-        "Height": 552.759827579461,
+        "Height": 536.759827579461,
         "FontSize": 36.0,
         "InitialTop": 94.437157994215568,
         "InitialHeight": 493.55982757946106,
@@ -1846,13 +1846,13 @@
           "d2369a0803c049068d6616c0f8fed691"
         ],
         "Left": 555.292611073177,
-        "Top": 152.85714619299461,
-        "Width": 771.66247360774469,
-        "Height": 476.67696498169221,
+        "Top": 109.65714619299459,
+        "Width": 630.86247360774473,
+        "Height": 367.29932746661427,
         "FontSize": 36.0,
         "InitialTop": 206.05714619299459,
-        "InitialHeight": 472.45434494793693,
-        "TextblockHeight": 43.2,
+        "InitialHeight": 272.09932746661428,
+        "TextblockHeight": 86.4,
         "Background": "#FFFF7BAC"
       },
       {
@@ -1871,7 +1871,7 @@
         "Height": 303.66958195765204,
         "FontSize": 36.0,
         "InitialTop": 255.25720199582992,
-        "InitialHeight": 305.113019351438,
+        "InitialHeight": 303.66958195765204,
         "TextblockHeight": 43.2,
         "Background": "#FFC1D676"
       },
@@ -1905,13 +1905,13 @@
           "c6f4b426ec6d47659c304636c25ebc1b"
         ],
         "Left": 2713.0304159952707,
-        "Top": 1257.0472670489571,
-        "Width": 510.45890685560437,
-        "Height": 355.5657907302155,
+        "Top": 1170.647267048957,
+        "Width": 299.25890685560432,
+        "Height": 425.96579073021559,
         "FontSize": 36.0,
         "InitialTop": 1396.647267048957,
         "InitialHeight": 253.16579073021558,
-        "TextblockHeight": 129.6,
+        "TextblockHeight": 216.0,
         "Background": "#FFC1D676"
       },
       {
@@ -1949,7 +1949,7 @@
       },
       {
         "Id": "f44307bc267c412ab9c4199e2cc3f5b1",
-        "Title": "Set Family Instance Parameter to Store EPD Product Name",
+        "Title": "Set Family Instance Parameter to Store Embodied Carbon",
         "Nodes": [
           "12f8b6d2ee0b47d8a48f805a26bdd57d",
           "547d232a773647f7b2a2b0e3ee8fb82f"
@@ -1990,8 +1990,8 @@
         ],
         "Left": 1175.7444953360855,
         "Top": 769.8920466471975,
-        "Width": 515.76830821520934,
-        "Height": 390.28091501128011,
+        "Width": 480.4391567496794,
+        "Height": 302.28091501128011,
         "FontSize": 36.0,
         "InitialTop": 823.09204664719755,
         "InitialHeight": 302.28091501128006,
@@ -2012,8 +2012,8 @@
         ],
         "Left": 199.600679527201,
         "Top": 761.64383347194257,
-        "Width": 834.16038485803449,
-        "Height": 718.10826379643015,
+        "Width": 768.712823706554,
+        "Height": 433.30826379643014,
         "FontSize": 36.0,
         "InitialTop": 814.84383347194262,
         "InitialHeight": 433.30826379643008,
@@ -2046,8 +2046,8 @@
         ],
         "Left": 1803.0115411865679,
         "Top": 761.81202641847688,
-        "Width": 539.27829879379067,
-        "Height": 279.61482910803016,
+        "Width": 504.07829879379062,
+        "Height": 263.61482910803016,
         "FontSize": 36.0,
         "InitialTop": 815.01202641847692,
         "InitialHeight": 263.61482910803011,
@@ -2055,8 +2055,8 @@
         "Background": "#FFFF7BAC"
       }
     ],
-    "X": 349.30772399875491,
-    "Y": 144.85571876399518,
-    "Zoom": 0.30468213843604158
+    "X": 65.099297016050855,
+    "Y": 229.92307536877939,
+    "Zoom": 0.19428867207110578
   }
 }
