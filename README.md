@@ -53,6 +53,11 @@ For ease of use and clarity the example Excel document has been formatted to inc
 ### Required Shared Project Parameters
 The user must also create two shared Revit project parameters for all families, `EPD Product` and `Embodied Carbon`, before using the Dynamo scripts.
 
+### Scheduling Embodied Carbon Data in Revit
+Once the shared project parameters have been made and the carbon values have been stored and calculated, users can start scheduling the families for further analysis.
+<img src="/media/Schedules/CarbonWallSchedule.png" alt="carbon wall schedule">
+<img src="/media/Schedules/CarbonMullionSchedule.png" alt="carbon mullion schedule">
+
 ## Files to download
 Please refer to the documentation under the workflow section for how to use the scripts and which scripts to use. 
 The three main Dynamo script files to download are:
