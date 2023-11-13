@@ -16,8 +16,10 @@ As indicated by the node, select the geometry within the family that you wish to
 ## Step 2: Calculate the area and volume of the geometry
 Depending on which Dynamo script you have chosen the group of nodes will either show its original complexity:
 <img src="/media/LoadableFamily/FamilyCarbon-AreaVolume.png" alt="calculate area volume nodes">
+
 or it will show the custom-node:
 <img src="/media/GeometryCalculateAreaVolumeNode.png" alt="custom node">
+
 These group of nodes will have three outputs into a nested list:
 * volume by solid
 * area by solid
