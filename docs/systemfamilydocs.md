@@ -41,7 +41,7 @@ Connect the node with the chosen construction stage into `IN[1]` of the `Python 
 ## Step 6: Output
 The following group of nodes will save the chosen EPD Product and the embodied carbon value into a shared project parameter for the in place Revit family.
 <img src="/media/SystemFamily/StoreEPDParameter.png" alt="output store EPD product name">
-<img src="/media/InPlaceFamily/SetEmbodiedCarbonParameter.png" alt="output store embodied carbon value">
+<img src="/media/SystemFamily/SetEmbodiedCarbonParameter.png" alt="output store embodied carbon value">
 Ensure that the parameter name given in the `Parameter Name` node correctly matches the shared project parameter created in the family.
 When selecting the system family in the Revit model, the properties tab should show the embodied carbon and EPD product information stored in the shared project parameters:
 <img src="/media/SystemFamily/RevitOutputExample.png" alt="Revit model output">
